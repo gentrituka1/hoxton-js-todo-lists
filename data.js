@@ -1443,16 +1443,31 @@ const todos = [
   }
 ]
 
-window.users = users
-window.todos = todos
+
+let message = "";
 
 for (let user of users){
-  alert("ID is " + user.id + "\n" + "And the name is: " + user.name + '\n' + "Who lives in: " + user.address.city)
+  message += ("ID is " + user.id  + " And the name is: " + user.name + " Who lives in: " + user.address.city + "\n\n")
 }
+
+alert(message);
 
 let promptedUserID = Number(prompt("Write down the user ID of your choosing"));
 
 console.log(promptedUserID);
+
+for (let todo of todos){
+    if (promptedUserID === todo.userId){
+        console.log(todo.title);
+    }
+}
+
+
+
+for(let user of users){
+  if (promptedUserID === user.id)
+  console.log("this is the username: " + user.username)
+}
 
 
 
