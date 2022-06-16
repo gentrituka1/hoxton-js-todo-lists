@@ -1451,6 +1451,9 @@ for (let user of users){
 }
 
 let promptedUserID = Number(prompt("Write down the user ID of your choosing"));
+
 console.log(promptedUserID);
+
+
 
 
