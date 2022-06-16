@@ -1444,17 +1444,26 @@ const todos = [
 ]
 
 
+
+
+// pjesa e pare
+
 let message = "";
 
 for (let user of users){
-  message += ("ID is " + user.id  + " And the name is: " + user.name + " Who lives in: " + user.address.city + "\n\n")
+  message = message + ("ID is " + user.id  + " And the name is: " + user.name + " Who lives in: " + user.address.city + "\n\n")
 }
 
 alert(message);
-
+// pjesa e dyte
 let promptedUserID = Number(prompt("Write down the user ID of your choosing"));
 
 console.log(promptedUserID);
+// pjesa e trete
+for(let user of users){
+  if (promptedUserID === user.id)
+  console.log("This is the username: " + user.username)
+}
 
 for (let todo of todos){
     if (promptedUserID === todo.userId){
@@ -1464,10 +1473,7 @@ for (let todo of todos){
 
 
 
-for(let user of users){
-  if (promptedUserID === user.id)
-  console.log("this is the username: " + user.username)
-}
+
 
 
 
