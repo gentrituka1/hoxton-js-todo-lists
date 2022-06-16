@@ -1451,26 +1451,31 @@ const todos = [
 let message = "";
 
 for (let user of users){
-  message = message + ("ID is " + user.id  + " And the name is: " + user.name + " Who lives in: " + user.address.city + "\n\n")
+  message += ("ID is " + user.id  + " And the name is: " + user.name + " who lives in: " + user.address.city + "\n\n")
 }
 
 alert(message);
+
 // pjesa e dyte
+
 let promptedUserID = Number(prompt("Write down the user ID of your choosing"));
 
 console.log(promptedUserID);
+
 // pjesa e trete
+
+let message1 = "";
 for(let user of users){
   if (promptedUserID === user.id)
-  console.log("This is the username: " + user.username)
+  message1 = message1 + ("This is the username: " + user.username + "\n\n")
 }
 
 for (let todo of todos){
     if (promptedUserID === todo.userId){
-        console.log(todo.title);
+        message1 = message1 + (todo.title + "\n");
     }
 }
-
+alert(message1);
 
 
 
